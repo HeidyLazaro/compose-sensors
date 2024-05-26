@@ -8,7 +8,7 @@ import dev.ricknout.composesensors.demo.ui.NotAvailableDemo
 import dev.ricknout.composesensors.magneticfield.isMagneticFieldSensorAvailable
 import dev.ricknout.composesensors.magneticfield.rememberMagneticFieldSensorValueAsState
 
-@Composable
+/*@Composable
 fun MagneticFieldDemo() {
     if (isMagneticFieldSensorAvailable()) {
         val sensorValue by rememberMagneticFieldSensorValueAsState()
@@ -22,4 +22,4 @@ fun MagneticFieldDemo() {
     } else {
         NotAvailableDemo(demo = Demo.MAGNETIC_FIELD)
     }
-}
+}*/

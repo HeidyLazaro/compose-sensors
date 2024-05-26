@@ -8,7 +8,7 @@ import dev.ricknout.composesensors.demo.ui.NotAvailableDemo
 import dev.ricknout.composesensors.pressure.isPressureSensorAvailable
 import dev.ricknout.composesensors.pressure.rememberPressureSensorValueAsState
 
-@Composable
+/*@Composable
 fun PressureDemo() {
     if (isPressureSensorAvailable()) {
         val sensorValue by rememberPressureSensorValueAsState()
@@ -22,4 +22,4 @@ fun PressureDemo() {
     } else {
         NotAvailableDemo(demo = Demo.PRESSURE)
     }
-}
+}*/

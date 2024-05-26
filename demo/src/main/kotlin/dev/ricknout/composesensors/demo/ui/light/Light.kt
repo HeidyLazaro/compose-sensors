@@ -18,7 +18,7 @@ import dev.ricknout.composesensors.demo.ui.NotAvailableDemo
 import dev.ricknout.composesensors.light.isLightSensorAvailable
 import dev.ricknout.composesensors.light.rememberLightSensorValueAsState
 
-@Composable
+/*@Composable
 fun LightDemo() {
     if (isLightSensorAvailable()) {
         val sensorValue by rememberLightSensorValueAsState(samplingPeriodUs = SensorManager.SENSOR_DELAY_FASTEST)
@@ -51,4 +51,4 @@ fun LightDemo() {
     } else {
         NotAvailableDemo(demo = Demo.LIGHT)
     }
-}
+}*/

@@ -8,7 +8,7 @@ import dev.ricknout.composesensors.demo.ui.NotAvailableDemo
 import dev.ricknout.composesensors.linearacceleration.isLinearAccelerationSensorAvailable
 import dev.ricknout.composesensors.linearacceleration.rememberLinearAccelerationSensorValueAsState
 
-@Composable
+/*@Composable
 fun LinearAccelerationDemo() {
     if (isLinearAccelerationSensorAvailable()) {
         val sensorValue by rememberLinearAccelerationSensorValueAsState()
@@ -22,4 +22,4 @@ fun LinearAccelerationDemo() {
     } else {
         NotAvailableDemo(demo = Demo.LINEAR_ACCELERATION)
     }
-}
+}*/

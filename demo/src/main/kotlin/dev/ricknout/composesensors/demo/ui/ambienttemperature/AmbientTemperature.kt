@@ -8,7 +8,7 @@ import dev.ricknout.composesensors.demo.model.Demo
 import dev.ricknout.composesensors.demo.ui.Demo
 import dev.ricknout.composesensors.demo.ui.NotAvailableDemo
 
-@Composable
+/*@Composable
 fun AmbientTemperatureDemo() {
     if (isAmbientTemperatureSensorAvailable()) {
         val sensorValue by rememberAmbientTemperatureSensorValueAsState()
@@ -22,4 +22,4 @@ fun AmbientTemperatureDemo() {
     } else {
         NotAvailableDemo(demo = Demo.AMBIENT_TEMPERATURE)
     }
-}
+}*/

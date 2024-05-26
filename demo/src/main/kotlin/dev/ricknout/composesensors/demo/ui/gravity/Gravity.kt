@@ -8,7 +8,7 @@ import dev.ricknout.composesensors.demo.ui.NotAvailableDemo
 import dev.ricknout.composesensors.gravity.isGravitySensorAvailable
 import dev.ricknout.composesensors.gravity.rememberGravitySensorValueAsState
 
-@Composable
+/*@Composable
 fun GravityDemo() {
     if (isGravitySensorAvailable()) {
         val sensorValue by rememberGravitySensorValueAsState()
@@ -22,4 +22,4 @@ fun GravityDemo() {
     } else {
         NotAvailableDemo(demo = Demo.GRAVITY)
     }
-}
+}*/

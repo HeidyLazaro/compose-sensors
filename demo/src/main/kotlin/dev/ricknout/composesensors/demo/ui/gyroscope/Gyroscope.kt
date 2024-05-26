@@ -8,7 +8,7 @@ import dev.ricknout.composesensors.demo.ui.NotAvailableDemo
 import dev.ricknout.composesensors.gyroscope.isGyroscopeSensorAvailable
 import dev.ricknout.composesensors.gyroscope.rememberGyroscopeSensorValueAsState
 
-@Composable
+/*@Composable
 fun GyroscopeDemo() {
     if (isGyroscopeSensorAvailable()) {
         val sensorValue by rememberGyroscopeSensorValueAsState()
@@ -22,4 +22,4 @@ fun GyroscopeDemo() {
     } else {
         NotAvailableDemo(demo = Demo.GYROSCOPE)
     }
-}
+}*/

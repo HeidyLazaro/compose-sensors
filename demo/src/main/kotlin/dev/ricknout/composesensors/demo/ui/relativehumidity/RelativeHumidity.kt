@@ -8,7 +8,7 @@ import dev.ricknout.composesensors.demo.ui.NotAvailableDemo
 import dev.ricknout.composesensors.relativehumidity.isRelativeHumiditySensorAvailable
 import dev.ricknout.composesensors.relativehumidity.rememberRelativeHumiditySensorValueAsState
 
-@Composable
+/*@Composable
 fun RelativeHumidityDemo() {
     if (isRelativeHumiditySensorAvailable()) {
         val sensorValue by rememberRelativeHumiditySensorValueAsState()
@@ -22,4 +22,4 @@ fun RelativeHumidityDemo() {
     } else {
         NotAvailableDemo(demo = Demo.RELATIVE_HUMIDITY)
     }
-}
+}*/

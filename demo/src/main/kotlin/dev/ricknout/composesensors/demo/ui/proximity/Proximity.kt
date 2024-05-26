@@ -17,7 +17,7 @@ import dev.ricknout.composesensors.proximity.getProximitySensor
 import dev.ricknout.composesensors.proximity.isProximitySensorAvailable
 import dev.ricknout.composesensors.proximity.rememberProximitySensorValueAsState
 
-@Composable
+/*@Composable
 fun ProximityDemo() {
     if (isProximitySensorAvailable()) {
         val sensor = getProximitySensor()
@@ -42,4 +42,4 @@ fun ProximityDemo() {
     } else {
         NotAvailableDemo(demo = Demo.PROXIMITY)
     }
-}
+}*/
