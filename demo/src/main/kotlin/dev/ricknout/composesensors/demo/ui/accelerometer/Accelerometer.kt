@@ -1,9 +1,13 @@
 package dev.ricknout.composesensors.demo.ui.accelerometer
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.res.Configuration
 import android.content.res.Resources
+import android.graphics.Canvas
 import android.graphics.Paint
 import android.text.style.BackgroundColorSpan
+import android.view.View
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -30,7 +34,9 @@ import dev.ricknout.composesensors.demo.R
 import dev.ricknout.composesensors.demo.model.Demo
 import dev.ricknout.composesensors.demo.ui.Demo
 import dev.ricknout.composesensors.demo.ui.NotAvailableDemo
+import kotlin.random.Random
 
+@SuppressLint("ResourceAsColor")
 @Composable
 fun AccelerometerDemo() {
     if (isAccelerometerSensorAvailable()) {
@@ -47,14 +53,6 @@ fun AccelerometerDemo() {
             val contentColor = LocalContentColor.current
             val radius = with(LocalDensity.current) { 10.dp.toPx() }
 
-            val goalHeight = with(LocalDensity.current) { 20.dp.toPx() }
-            val goalWidth = width / 5
-
-            //val topGoalRect = Offset((width - goalWidth) / 2, 0f) to Offset((width + goalWidth) / 2, goalHeight)
-            val futTopRect = Offset(75F, 50F)  to Offset(250F, 100F)
-            //val bottomGoalRect = Offset((width - goalWidth) / 2, height - goalHeight) to Offset((width + goalWidth) / 2, height)
-
-
             center = if (orientation == Configuration.ORIENTATION_PORTRAIT) {
                 Offset(
                     x = (center.x - x).coerceIn(radius, width - radius),
@@ -66,13 +64,11 @@ fun AccelerometerDemo() {
                     y = (center.y + x).coerceIn(radius, height - radius),
                 )
             }
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .paint(
-                        painterResource(id = R.drawable.campo),
-                        contentScale = ContentScale.FillBounds
-                    ),
+            Box (modifier = Modifier.fillMaxSize()
+                .paint(
+                    painterResource(id = R.drawable.campo),
+                    contentScale = ContentScale.FillBounds
+                )
             ){
                 Canvas(modifier = Modifier.fillMaxSize()) {
                     drawCircle(
@@ -80,18 +76,60 @@ fun AccelerometerDemo() {
                         radius = radius,
                         center = center,
                     )
-                    drawRect(
-                        color = Color.Cyan,
-                        topLeft = futTopRect.first,
-                        size = Size(futTopRect.second.x, futTopRect.first.y),
-
-                        //size = androidx.compose.ui.geometry.Size(futTopRect.second.x - bottomGoalRect.first.x, bottomGoalRect.second.y - bottomGoalRect.first.y)
+                    //Great
+                    drawCircle(
+                        color = Color.Magenta,
+                        radius = width/17,
+                        center = Offset(200f,250f)
                     )
-                    /* drawRect(
-                         color = Color.Magenta,
-                         topLeft = futTopRect.first,
-                         size = androidx.compose.ui.geometry.Size(topGoalRect.second.x - topGoalRect.first.x, topGoalRect.second.y - topGoalRect.first.y)
-                     )*/
+                    //Great
+                    drawCircle(
+                        color = Color.Red,
+                        radius = width/17,
+                        center = Offset(width/8f,height/3f)
+                    )
+                    //Great
+                    drawCircle(
+                        color = Color.Blue,
+                        radius = width/17,
+                        center = Offset(700f,500f)
+                    )
+                    //Great
+                    drawCircle(
+                        color = Color.DarkGray,
+                        radius = width/17,
+                        center = Offset(700f,900f)
+                    )
+                    //Great
+                    drawCircle(
+                        color = Color.Green,
+                        radius = width/17,
+                        center = Offset(800f,1100f)
+                    )
+                    //Great
+                    drawCircle(
+                        color = Color.Cyan,
+                        radius = width/17,
+                        center = Offset(400f,1200f)
+                    )
+                    //Great
+                    drawCircle(
+                        color = Color.Yellow,
+                        radius = width/17,
+                        center = Offset(600f,1500f)
+                    )
+                    //Great
+                    drawCircle(
+                        color = Color.LightGray,
+                        radius = width/17,
+                        center = Offset(200f,1500f)
+                    )
+                    //Great
+                    drawCircle(
+                        color = Color.Yellow,
+                        radius = width/17,
+                        center = Offset(800f,300f)
+                    )
                 }
             }
         }
@@ -99,3 +137,5 @@ fun AccelerometerDemo() {
         NotAvailableDemo(demo = Demo.ACCELEROMETER)
     }
 }
+
+
