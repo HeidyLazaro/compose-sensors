@@ -130,7 +130,7 @@ fun AccelerometerDemo() {
                 Canvas(modifier = Modifier.fillMaxSize()) {
                     //Tabla del contador
                     drawRect(
-                        color = Color.Black,
+                        color = Color.White,
                         topLeft = Offset(25f, height/2-60f),
                         size = androidx.compose.ui.geometry.Size(
                             35f, 120f
