@@ -97,7 +97,7 @@ fun AccelerometerDemo() {
                         radius = width/17,
                         center = Offset(width/7*6,height/11*2)
                     )
-                    //Jugador cancha superior (dorado)
+                    //Jugador cancha superior
                     drawCircle(
                         color = Color.Green,
                         radius = width/17,
@@ -141,13 +141,13 @@ fun AccelerometerDemo() {
                         radius = width/17,
                         center = Offset(width/7*6,height/11*7)
                     )
-                    //Jugador cancha inferior (verde-azul)
+                    //Jugador cancha inferior
                     drawCircle(
                         color = Color.Yellow,
                         radius = width/17,
                         center = Offset(width/7*5,height/11*8)
                     )
-                    //Jugador cancha inferior (lima)
+                    //Jugador cancha inferior
                     drawCircle(
                         color = Color.Red,
                         radius = width/17,
