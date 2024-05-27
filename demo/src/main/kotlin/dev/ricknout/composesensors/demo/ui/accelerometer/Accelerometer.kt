@@ -80,55 +80,55 @@ fun AccelerometerDemo() {
                     drawCircle(
                         color = Color.Magenta,
                         radius = width/17,
-                        center = Offset(200f,250f)
+                        center = Offset(width/7*2,height/11*2),
+                    )
+                    //Great
+                    drawCircle(
+                        color = Color.Black,
+                        radius = width/17,
+                        center = Offset(width/7*6,height/11*2)
                     )
                     //Great
                     drawCircle(
                         color = Color.Red,
                         radius = width/17,
-                        center = Offset(width/8f,height/3f)
+                        center = Offset(width/14*3,height/11*4)
                     )
                     //Great
                     drawCircle(
                         color = Color.Blue,
                         radius = width/17,
-                        center = Offset(700f,500f)
+                        center = Offset(width/7*5,height/11*3)
                     )
                     //Great
                     drawCircle(
                         color = Color.DarkGray,
                         radius = width/17,
-                        center = Offset(700f,900f)
+                        center = Offset(width/7*5,height/11*5)
                     )
                     //Great
                     drawCircle(
                         color = Color.Green,
                         radius = width/17,
-                        center = Offset(800f,1100f)
+                        center = Offset(width/7*6,height/11*7)
                     )
                     //Great
                     drawCircle(
                         color = Color.Cyan,
                         radius = width/17,
-                        center = Offset(400f,1200f)
+                        center = Offset(width/7*3,height/11*7)
                     )
                     //Great
                     drawCircle(
                         color = Color.Yellow,
                         radius = width/17,
-                        center = Offset(600f,1500f)
+                        center = Offset(width/7*5,height/11*8)
                     )
                     //Great
                     drawCircle(
                         color = Color.LightGray,
                         radius = width/17,
-                        center = Offset(200f,1500f)
-                    )
-                    //Great
-                    drawCircle(
-                        color = Color.Yellow,
-                        radius = width/17,
-                        center = Offset(800f,300f)
+                        center = Offset(width/7*2,height/11*9)
                     )
                 }
             }
