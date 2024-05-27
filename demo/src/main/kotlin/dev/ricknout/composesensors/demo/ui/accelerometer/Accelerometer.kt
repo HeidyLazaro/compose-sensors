@@ -14,12 +14,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import dev.ricknout.composesensors.accelerometer.isAccelerometerSensorAvailable
 import dev.ricknout.composesensors.accelerometer.rememberAccelerometerSensorValueAsState
@@ -63,7 +66,14 @@ fun AccelerometerDemo() {
                     y = (center.y + x).coerceIn(radius, height - radius),
                 )
             }
-            Box (modifier = Modifier.fillMaxSize()){
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .paint(
+                        painterResource(id = R.drawable.campo),
+                        contentScale = ContentScale.FillBounds
+                    ),
+            ){
                 Canvas(modifier = Modifier.fillMaxSize()) {
                     drawCircle(
                         color = contentColor,
