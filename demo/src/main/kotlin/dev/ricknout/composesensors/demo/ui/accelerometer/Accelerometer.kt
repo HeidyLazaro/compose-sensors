@@ -53,6 +53,14 @@ fun AccelerometerDemo() {
             val contentColor = LocalContentColor.current
             val radius = with(LocalDensity.current) { 10.dp.toPx() }
 
+            //ancho de la porteria y tamaño acorde a la pantalla
+            val goalHeight = with(LocalDensity.current) { 80.dp.toPx() }
+            val goalWidth = width / 5
+
+            //posicion de las porterias
+            val topGoalRect = Offset((width - goalWidth) / 2, 100f) to Offset((width + goalWidth) / 2, goalHeight)
+            val bottomGoalRect = Offset((width - goalWidth) / 2, height - goalHeight) to Offset((width + goalWidth) / 2, height-100)
+
             center = if (orientation == Configuration.ORIENTATION_PORTRAIT) {
                 Offset(
                     x = (center.x - x).coerceIn(radius, width - radius),
@@ -71,64 +79,85 @@ fun AccelerometerDemo() {
                 )
             ){
                 Canvas(modifier = Modifier.fillMaxSize()) {
+                    //Porteria superior
+                    drawRect(
+                        color = Color.LightGray,
+                        topLeft = topGoalRect.first,
+                        size = androidx.compose.ui.geometry.Size(topGoalRect.second.x - topGoalRect.first.x, topGoalRect.second.y - topGoalRect.first.y)
+                    )
+                    //Jugador cancha superior
+                    drawCircle(
+                        color = Color.Magenta,
+                        radius = width/17,
+                        center = Offset(width/7*2,height/22*3),
+                    )
+                    //Jugador cancha superior
+                    drawCircle(
+                        color = Color.Red,
+                        radius = width/17,
+                        center = Offset(width/7*6,height/11*2)
+                    )
+                    //Jugador cancha superior (dorado)
+                    drawCircle(
+                        color = Color.Green,
+                        radius = width/17,
+                        center = Offset(width/7*5,height/11*3)
+                    )
+                    //Jugador cancha superior
+                    drawCircle(
+                        color = Color.Yellow,
+                        radius = width/17,
+                        center = Offset(width/7*3,height/11*4)
+                    )
+                    //Jugador cancha superior (rosa)
+                    drawCircle(
+                        color = Color.Cyan,
+                        radius = width/17,
+                        center = Offset(width/7*4,height/11*5)
+                    )
+
+                    //Jugador usuario
                     drawCircle(
                         color = contentColor,
                         radius = radius,
                         center = center,
                     )
-                    //Great
+
+                    //Jugador cancha inferior
                     drawCircle(
                         color = Color.Magenta,
                         radius = width/17,
-                        center = Offset(width/7*2,height/11*2),
+                        center = Offset(width/7*3,height/11*7)
                     )
-                    //Great
-                    drawCircle(
-                        color = Color.Black,
-                        radius = width/17,
-                        center = Offset(width/7*6,height/11*2)
-                    )
-                    //Great
-                    drawCircle(
-                        color = Color.Red,
-                        radius = width/17,
-                        center = Offset(width/14*3,height/11*4)
-                    )
-                    //Great
+                    //Jugador cancha inferior
                     drawCircle(
                         color = Color.Blue,
                         radius = width/17,
-                        center = Offset(width/7*5,height/11*3)
+                        center = Offset(width/7*1,height/11*6)
                     )
-                    //Great
-                    drawCircle(
-                        color = Color.DarkGray,
-                        radius = width/17,
-                        center = Offset(width/7*5,height/11*5)
-                    )
-                    //Great
-                    drawCircle(
-                        color = Color.Green,
-                        radius = width/17,
-                        center = Offset(width/7*6,height/11*7)
-                    )
-                    //Great
+                    //Jugador cancha inferior
                     drawCircle(
                         color = Color.Cyan,
                         radius = width/17,
-                        center = Offset(width/7*3,height/11*7)
+                        center = Offset(width/7*6,height/11*7)
                     )
-                    //Great
+                    //Jugador cancha inferior (verde-azul)
                     drawCircle(
                         color = Color.Yellow,
                         radius = width/17,
                         center = Offset(width/7*5,height/11*8)
                     )
-                    //Great
+                    //Jugador cancha inferior (lima)
                     drawCircle(
-                        color = Color.LightGray,
+                        color = Color.Red,
                         radius = width/17,
                         center = Offset(width/7*2,height/11*9)
+                    )
+                    //Porteria cancha inferior
+                    drawRect(
+                        color = Color.LightGray,
+                        topLeft = bottomGoalRect.first,
+                        size = androidx.compose.ui.geometry.Size(bottomGoalRect.second.x - bottomGoalRect.first.x, bottomGoalRect.second.y - bottomGoalRect.first.y)
                     )
                 }
             }
